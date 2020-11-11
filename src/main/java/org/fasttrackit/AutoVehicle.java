@@ -46,5 +46,16 @@ public class AutoVehicle extends Vehicle {
         this.fuelLevel = fuelLevel;
     }
 
+    @Override
+    public double accelerate(double speed) {
+        setCurrentSpeed(getCurrentSpeed() + speed);
 
+        double traveldDistance = getCurrentSpeed() / 60;
+
+        double spentFuel = traveldDistance * mileage / 100;
+
+        fuelLevel -= spentFuel;
+
+        return super.accelerate(speed);
+    }
 }

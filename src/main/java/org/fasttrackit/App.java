@@ -26,8 +26,15 @@ public class App {
 
         RadioControlledMotorcycle motorcycle = new RadioControlledMotorcycle(new Engine());
 
-        Race race = new Race(dacia, motorcycle);
+        Race race = new Race();
+        race.getCompetitors().add(dacia);
+        race.getCompetitors().add(lada);
 
+        for (Vehicle vehicle : race.getCompetitors()) {
+            if (vehicle != null){
+                System.out.println(vehicle.getName());
+            }
+        }
 
     }
 }

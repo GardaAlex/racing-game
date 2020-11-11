@@ -1,21 +1,16 @@
 package org.fasttrackit;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Race {
 
-    private Vehicle firstCompetitor;
-    private Vehicle secondCompetitor;
+    private List<Vehicle> competitors = new ArrayList<Vehicle>();
 
-    public Race(Vehicle firstCompetitor, Vehicle secondCompetitor) {
-        this.firstCompetitor = firstCompetitor;
-        this.secondCompetitor = secondCompetitor;
+    public List<Vehicle> getCompetitors() {
+        return competitors;
     }
 
-    public Vehicle getFirstCompetitor() {
-        return firstCompetitor;
-    }
 
-    public Vehicle getSecondCompetitor() {
-        return secondCompetitor;
-    }
 }
 
