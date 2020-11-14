@@ -2,7 +2,7 @@ package org.fasttrackit;
 
 
 public class App {
-    public static void main( String[] args ){
+    public static void main( String[] args ) throws Exception {
 
         Engine daciaEngine = new Engine();
         daciaEngine.setManufacturer("Renault");
@@ -36,5 +36,7 @@ public class App {
             }
         }
 
+        race.readVehicleName();
+        race.readAccelerationSpeed();
     }
 }
